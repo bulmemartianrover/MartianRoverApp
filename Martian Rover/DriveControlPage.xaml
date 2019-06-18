@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Martian_Rover.DriveControlPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Martian_Rover"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button HorizontalAlignment="Left" Margin="60,20,0,0" VerticalAlignment="Top" Height="80" Width="80" Click="back_Click">
+            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE72B;"/>
+        </Button>
+        <Button x:Name="test" HorizontalAlignment="Left" Margin="150,20,0,0" VerticalAlignment="Top" Height="80" Width="150" Click="test_Click">Test</Button>
+        <Grid x:Name="driveControls">
+            <Rectangle HorizontalAlignment="Left" Margin="105,120,0,0" VerticalAlignment="Top" Height="150" Width="150" Fill="#FF535353" PointerPressed="forw_Press" PointerReleased="btn_Release"/>
+            <Rectangle HorizontalAlignment="Left" Margin="105,310,0,0" VerticalAlignment="Top" Height="150" Width="150" Fill="#FF535353" PointerPressed="backw_Press" PointerReleased="btn_Release"/>
+        </Grid>
+        <Grid x:Name="armControls" Visibility="Collapsed">
+            <!--<Slider HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Width="250"></Slider>
+            <Slider HorizontalAlignment="Left" Margin="55,150,0,0" VerticalAlignment="Top" Width="250"></Slider>
+            <Slider HorizontalAlignment="Left" Margin="55,200,0,0" VerticalAlignment="Top" Width="250"></Slider>
+            <Slider HorizontalAlignment="Left" Margin="55,250,0,0" VerticalAlignment="Top" Width="250"></Slider>
+            <Slider HorizontalAlignment="Left" Margin="55,300,0,0" VerticalAlignment="Top" Width="250"></Slider>-->
+        </Grid>
+        <Button HorizontalAlignment="Left" Margin="105,480,0,-48" VerticalAlignment="Top" Height="50" Width="150" Click="control_servo_Click">Control Servo</Button>
+        <ScrollViewer x:Name="responseScroller" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,535,0,0" Height="100" Width="360">
+            <TextBlock x:Name="responseBox" TextWrapping="Wrap" Width="360"/>
+        </ScrollViewer>
+    </Grid>
+</Page>
