@@ -8,6 +8,7 @@ using Windows.Devices.Bluetooth.Rfcomm;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Networking.Sockets;
+using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -27,6 +28,9 @@ namespace Martian_Rover {
 
         public MainPage() {
             this.InitializeComponent();
+            ApplicationView.GetForCurrentView().SetPreferredMinSize(new Size(360, 640));
+            ApplicationView.PreferredLaunchViewSize = new Size(360, 640);
+            ApplicationView.PreferredLaunchWindowingMode = ApplicationViewWindowingMode.PreferredLaunchViewSize;
             reloadDevices();
         }
 

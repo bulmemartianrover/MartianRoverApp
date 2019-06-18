@@ -29,7 +29,7 @@ namespace Martian_Rover {
 
         public DriveControlPage() {
             this.InitializeComponent();
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 4; i++) {
                 var slider = new Slider() {
                     HorizontalAlignment = HorizontalAlignment.Left,
                     VerticalAlignment = VerticalAlignment.Top,
@@ -69,6 +69,14 @@ namespace Martian_Rover {
 
         private async void backw_Press(object sender, PointerRoutedEventArgs e) {
             await sendCommand("backward");
+        }
+
+        private async void left_Press(object sender, PointerRoutedEventArgs e) {
+            await sendCommand("left_wheel");
+        }
+
+        private async void right_Press(object sender, PointerRoutedEventArgs e) {
+            await sendCommand("right_wheel");
         }
 
         private async void btn_Release(object sender, PointerRoutedEventArgs e) {

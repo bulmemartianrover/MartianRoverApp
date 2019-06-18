@@ -14,8 +14,10 @@
         </Button>
         <Button x:Name="test" HorizontalAlignment="Left" Margin="150,20,0,0" VerticalAlignment="Top" Height="80" Width="150" Click="test_Click">Test</Button>
         <Grid x:Name="driveControls">
-            <Rectangle HorizontalAlignment="Left" Margin="105,120,0,0" VerticalAlignment="Top" Height="150" Width="150" Fill="#FF535353" PointerPressed="forw_Press" PointerReleased="btn_Release"/>
-            <Rectangle HorizontalAlignment="Left" Margin="105,310,0,0" VerticalAlignment="Top" Height="150" Width="150" Fill="#FF535353" PointerPressed="backw_Press" PointerReleased="btn_Release"/>
+            <Rectangle HorizontalAlignment="Left" Margin="130,120,0,0" VerticalAlignment="Top" Height="100" Width="100" Fill="#FF535353" PointerPressed="forw_Press" PointerReleased="btn_Release"/>
+            <Rectangle HorizontalAlignment="Left" Margin="130,360,0,0" VerticalAlignment="Top" Height="100" Width="100" Fill="#FF535353" PointerPressed="backw_Press" PointerReleased="btn_Release"/>
+            <Rectangle HorizontalAlignment="Left" Margin="20,240,0,0" VerticalAlignment="Top" Height="100" Width="100" Fill="#FF535353" PointerPressed="left_Press" PointerReleased="btn_Release"/>
+            <Rectangle HorizontalAlignment="Left" Margin="240,240,0,0" VerticalAlignment="Top" Height="100" Width="100" Fill="#FF535353" PointerPressed="right_Press" PointerReleased="btn_Release"/>
         </Grid>
         <Grid x:Name="armControls" Visibility="Collapsed">
             <!--<Slider HorizontalAlignment="Left" Margin="55,100,0,0" VerticalAlignment="Top" Width="250"></Slider>
