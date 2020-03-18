@@ -25,7 +25,7 @@ namespace Martian_Rover {
     public sealed partial class DriveControlPage : Page {
         ThreadPoolTimer timer;
 
-        string[] servoNames = { "Basis", "1. Gelenk", "2. Gelenk", "Greifer", "Test" };
+        string[] servoNames = { "Base", "1st joint", "2nd joint", "Grabber", "Camera" };
 
         public DriveControlPage() {
             this.InitializeComponent();
@@ -112,6 +112,14 @@ namespace Martian_Rover {
                     });
                 }, new TimeSpan(2000000));
             }
+        }
+
+        private async void cam_left_Click(object sender, RoutedEventArgs e) {
+            await sendCommand("cam_stepper", "11");
+        }
+
+        private async void cam_right_Click(object sender, RoutedEventArgs e) {
+            await sendCommand("cam_stepper", "01");
         }
 
         private async Task<string> sendCommand(string cmd, string args = "") {

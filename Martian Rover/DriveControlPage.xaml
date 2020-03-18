@@ -25,6 +25,8 @@
             <Slider HorizontalAlignment="Left" Margin="55,200,0,0" VerticalAlignment="Top" Width="250"></Slider>
             <Slider HorizontalAlignment="Left" Margin="55,250,0,0" VerticalAlignment="Top" Width="250"></Slider>
             <Slider HorizontalAlignment="Left" Margin="55,300,0,0" VerticalAlignment="Top" Width="250"></Slider>-->
+            <Button HorizontalAlignment="Left" Margin="50,420,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="cam_left_Click">Cam left</Button>
+            <Button HorizontalAlignment="Left" Margin="210,420,0,0" VerticalAlignment="Top" Height="50" Width="100" Click="cam_right_Click">Cam right</Button>
         </Grid>
         <Button HorizontalAlignment="Left" Margin="105,480,0,-48" VerticalAlignment="Top" Height="50" Width="150" Click="control_servo_Click">Control Servo</Button>
         <ScrollViewer x:Name="responseScroller" HorizontalScrollBarVisibility="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,535,0,0" Height="100" Width="360">
